@@ -1,0 +1,106 @@
+﻿/* SPIFFY ROUND CORNERS */
+.spiffy{display:block}
+.spiffy *{
+  display:block;
+  height:1px;
+  overflow:hidden;
+  background:#086D41
+}
+
+.spiffy1{
+  margin-left:3px;
+  margin-right:3px;
+  padding-left:1px;
+  padding-right:1px;
+  border-left:1px solid #492347;
+  border-right:1px solid #492347;
+  background:#333d7c
+}
+
+.spiffy2{
+  margin-left:1px;
+  margin-right:1px;
+  padding-right:1px;
+  padding-left:1px;
+  border-left:1px solid #610810;
+  border-right:1px solid #610810;
+  background:#2f4286
+}
+
+.spiffy3{
+  margin-left:1px;
+  margin-right:1px;
+  border-left:1px solid #2f4286;
+  border-right:1px solid #2f4286;
+}
+
+.spiffy4{
+  border-left:1px solid #492347;
+  border-right:1px solid #492347
+}
+
+.spiffy5{
+  border-left:1px solid #333d7c;
+  border-right:1px solid #333d7c
+}
+
+.spiffyfg{
+  background:#086D41
+}
+/* END SPIFFY */
+
+#billboard #left-column p {
+	color: #086D41;
+}
+
+.about h4, .works h4, .discounts h4, .rebates h4, .savings h4, .contact h4{
+	color: #FFFFFF; 
+}
+
+.dashboard-panel h1 {
+	color: #086D41;
+}
+
+h3 {
+	color: #086D41;
+}
+
+#left-column h2 {
+	color: #000;
+}
+
+h2 {
+	color: #666;
+}
+
+p {
+	color: #ccc;
+}
+
+a {
+	color: #FFA715;
+}
+
+#bottom-nav a, #bottom-nav strong, #bottom-nav span {
+	color: #086D41; /*Change per school color */
+} 
+
+#bottom-nav a:hover {
+	color:#086D41; /*Change per school color */
+}
+
+#bottom-nav .current {
+    background-image:url("images/left_on.gif");
+    font-family: Arial;
+    font-size: 10pt;
+}
+	
+#bottom-nav .current a {
+    background-image:url("images/right_on.gif");
+	color: #fff;
+	font-family: Arial;
+    font-size: 10pt;
+}
+	
+
+

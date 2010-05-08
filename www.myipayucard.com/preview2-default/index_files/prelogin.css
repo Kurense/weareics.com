@@ -1,0 +1,885 @@
+/* CSS Document */
+
+html {
+	margin: 0;
+	padding: 0;
+}
+
+body {
+	background-color: #fff;
+	margin: 0;
+	padding: 0;
+	text-align: center;
+}
+
+/* set default margin & padding to 0 */
+div, span, h1, h2, h3, h4, h5, p, ul, li, dl, dd, dt, ol, blockquote, pre, table, tr, td, th, a {
+	padding: 0;
+	margin: 0;
+}
+
+img {
+	border-style: none;
+	border-color: inherit;
+	border-width: medium;
+}
+
+.right {
+	float: right;
+}
+
+.left {
+	float: left;
+}
+
+.clear {
+	clear: both;
+}
+
+h4 {
+	color: #B0B076;
+	font: normal 70px "Lucida Sans", sans-serif;
+	text-align: left;
+	margin: 0;
+	padding: 0;
+}
+
+h3 {
+	color: #2252A6;
+	font: normal 25px "Lucida Sans", sans-serif;
+	text-align: left;
+	margin: 0;
+	padding: 0;
+}
+
+h2 {
+	color: #666;
+	font: normal 16px "Lucida Sans", sans-serif;
+	text-align: left;
+	margin: 5px 0px 10px 0px;
+	padding: 0;
+}
+
+#left-column h2 {
+	color: #000;
+}
+
+p {
+	font: normal 16px "Lucida Sans", sans-serif;
+	color: #ccc;
+	line-height: 16px;
+	margin: 0;
+	padding: 0;
+	text-align: left;
+}
+
+a img {
+	border: none;
+}
+
+a {
+	text-decoration: underline;
+	color: #336699;
+	font: bold 11px "Lucida Sans", sans-serif;
+}
+
+a:hover {
+	text-decoration: none;
+}
+
+/* LAYOUT */
+
+#center-wrap {
+	width: 961px;
+	margin: 0 auto;
+}
+
+#wrap {
+	width: 961px;
+	background-color: #fff;
+	float: left;
+	margin-top: 10px;
+}
+
+#wrap-misc {
+	width: 380px;
+	background-color: #fff;
+	float: left;
+	margin: 5px 0 0 5px;
+}
+
+#header {
+	float: left;
+	width: 100%;
+	text-align: left;
+	margin: 0;
+	padding: 0;
+}
+
+#header #logos {
+	float: left;
+	width: 450px;
+	padding: 0 0 5px 0;
+}
+
+#header #logos img {
+	float: left;
+}
+
+#header #logos #ipayu {
+	float: right;
+	width: 150px;
+	margin: 20px 100px 0 0;
+}
+
+#header #logos #ipayu p {
+	margin: 25px 0 0 0;
+	float: left;
+	width: 80px;
+	text-align: right;
+	font: normal 10px "Lucida Sans", sans-serif;
+	color: #7F7F7F;
+}
+
+#header #logos #ipayu img {
+	width: 58px;
+	height: 58px;
+	float: right;
+}
+
+#header #summary {
+	float: left;
+	text-align: left;
+	width: 163px;
+	background-color: #fff;
+}
+
+#header #summary h1 {
+	font: normal 10px "Lucida Sans", sans-serif;
+	color: #000;
+	margin: 0;
+	padding: 0;
+}
+
+#header #summary h2 {
+	font: bold 12px "Lucida Sans", sans-serif;
+	color: #000;
+	margin: 0;
+	padding: 0;
+}
+
+#header #summary p {
+	font: normal 10px "Lucida Sans", sans-serif;
+	color: #000;
+}
+
+#header #summary img {
+	padding: 0;
+}
+
+#navigation {
+	float: right;
+	width: 500px;
+}
+
+#navigation-login {
+	float: right;
+	width: 780px;
+}
+
+#navigation-login #ipayu {
+	float: left;
+	width: 150px;
+	margin: 25px 0 0 0;
+}
+
+#navigation-login #ipayu p {
+	margin: 25px 0 0 0;
+	float: left;
+	width: 80px;
+	text-align: right;
+	font: normal 10px "Lucida Sans", sans-serif;
+	color: #7F7F7F;
+}
+
+#navigation-login #ipayu img {
+	width: 58px;
+	height: 58px;
+	float: right;
+}
+
+#navigation-login h3 {
+	font: bold 24px "Lucida Sans", sans-serif;
+	margin: 10px 0 0 20px;
+	width: 450px;
+}
+
+#navigation-login p {
+	font: normal 12px "Lucida Sans", sans-serif;
+	color: #3B6C9E;
+	line-height: 16px;
+	margin: 10px 0 0 30px;
+	padding: 0;
+	text-align: left;
+	float: left;
+	width: 440px;
+}
+
+#top-nav {
+	float: right;
+	width: 200px;
+}
+#navigation-login #bottom-nav {
+	float: right;
+	width: 600px;
+	margin: 5px 0 0 0;
+	padding: 0;
+}
+
+#bottom-nav {
+	float: right;
+	width: 700px;
+	margin: 0;
+	padding: 0;
+}
+
+#billboard {
+	float: left;
+	width: 100%;
+	border-top: 1px solid #DDD;
+	background: transparent url(../images/bg_billboard.jpg) no-repeat 0 0;
+	margin: 0 0 5px 0;
+	padding: 0;
+}
+
+#billboard #left-column {
+	float: left;
+	width: 520px;
+	padding: 5px 0 0 10px;
+}
+
+#billboard #left-column p#btn-register {
+	float: left;
+	background: transparent url(../images/btn_gold.gif) no-repeat 0 0;
+	width: 210px;
+	height: 26px;
+	margin: 0px 0 0 0;
+	padding: 2px;
+}
+
+#billboard #left-column p#btn-register a {
+	font: normal 14px "Lucida Sans", sans-serif;
+	color: #000;
+	text-decoration: none;
+}
+
+#billboard #left-column h2 {
+	margin: 10px 0 0 0;
+}
+
+#billboard #registration {
+	float: right;
+	width: 303px;
+	margin: 20px;
+}
+
+#billboard #left-column p {
+	font: normal 12px "Lucida Sans", sans-serif;
+	color: #2252A6;
+	line-height: 18px;
+	margin: 10px 0 0 0;
+	padding: 0;
+	text-align: left;
+}
+
+#billboard #registration h1 {
+	font: bold 28px "Lucida Sans", sans-serif;
+	color: #fff;
+}
+
+#billboard #registration p {
+	font: normal 16px "Lucida Sans", sans-serif;
+	color: #fff;
+	margin: 5px 0 0 0;
+	padding: 0;
+	text-align: center;
+	word-spacing:4px;
+}
+
+#login {
+	float: right;
+	background: #EBF5FE url(../images/bg_login.gif) repeat-x 0 0;
+	width: 100%;
+	border-top: 1px solid #CCC;
+}
+
+.highlight {
+	color: #FFA715;
+}
+
+#dashboard {
+	float: left;
+	width: 100%;
+}
+
+.dashboard-panel {
+	float: left;
+	width: 174px;
+	height: 155px;
+	border: 1px solid #C8C8C8;
+	background-color: #F5F3F0;
+	text-align: left;
+	margin: 3px;
+	padding: 5px;
+}
+
+.dashboard-panel p, #billboard p {
+	font: normal 12px "Lucida Sans", sans-serif;
+	color: #2252A6;
+	line-height: 16px;
+	margin: 5px 0;
+	padding: 0;
+	text-align: left;
+}
+.dashboard-panel img {
+	width: 170px;
+	height: 72px;
+	margin-left: 2px;
+}
+
+#bottom-content {
+	width: 100%;
+	float: left;
+	margin: 0 0 30px 0;
+}
+
+#logo-dashboard {
+	text-align: center;
+	margin: 10px auto;
+	width: 800px;
+	height: 80px;
+	
+}
+
+#logo-dashboard img {
+	margin: 0 20px;
+}
+
+#footer {
+	width:100%;
+	float: left;
+}
+
+#footer p {
+	font-size: 11px;
+	color: #7A7A7A;
+	text-align: center;
+	margin: 10px 0 0 0;
+}
+
+.home {
+	padding: 20px 0 0 0;
+	border-top: none;
+	text-align: left;
+}
+
+.about {
+	border-top: 1px solid #CCCCCC;
+	background: transparent url(../images/AboutIPayU.jpg) no-repeat top right;
+	text-align: left;
+}
+
+.works {
+	border-top: 1px solid #CCCCCC;
+	background: transparent url(../images/HowItWorks.jpg) no-repeat top right;
+	text-align: left;
+}
+
+.discounts {
+	border-top: 1px solid #CCCCCC;
+	background: transparent url(../images/StudentDiscount.jpg) no-repeat top right;
+	text-align: left;
+}
+
+.rebates {
+	border-top: 1px solid #CCCCCC;
+	background: transparent url(../images/RebateProgram.jpg) no-repeat top right;
+	text-align: left;
+}
+
+.savings {
+	border-top: 1px solid #CCCCCC;
+	background: transparent url(../images/HowYouSave.jpg) no-repeat top right;
+	text-align: left;
+}
+
+.moneymanagement {
+	border-top: 1px solid #CCCCCC;
+	background: transparent url(../images/HowYouSave.jpg) no-repeat top right;
+	text-align: left;
+}
+
+.contact {
+	border-top: 1px solid #CCCCCC;
+	background: transparent url(../images/ContactUs.jpg) no-repeat top right;
+	text-align: left;
+}
+
+.account-contact {
+	padding: 20px 0 0 0;
+	border-top: none;
+	text-align: left;
+}
+
+.misc {
+	border-top: none;
+	text-align: left;
+}
+
+.about h4, .works h4, .discounts h4, .rebates h4, .savings h4, .contact h4, .moneymanagement h4{
+	color: #2252A6;
+	font: bold 30px "Lucida Sans", sans-serif;
+	margin: 10px 0 10px 0;
+	width: 625px;
+	line-height: 28px;
+}
+
+.about h3, .works h3, .discounts h3, .rebates h3, .savings h3, .moneymanagement h3 {
+	font: normal 16px "Lucida Sans", sans-serif;
+	width: 625px;
+	margin: 10px 0 20px 0;
+}
+
+.contact a {
+	font: normal 16px "Lucida Sans", sans-serif;
+	color: #2252A6;
+}
+
+.contact h2 {
+	margin: 20px 0 5px 0;
+	font: normal 16px "Lucida Sans", sans-serif;
+	color: #000;
+}
+
+.contact h3 {
+	font: normal 20px "Lucida Sans", sans-serif;
+	width: 625px;
+	margin: 10px 0 20px 0;
+	letter-spacing: -1px;
+}
+
+.contact p {
+	color: #666;
+	font: normal 14px "Lucida Sans", sans-serif;
+	margin: 0 0 20px 0;
+	width: 625px;
+	line-height: 20px;
+}
+
+.contact table tr td {
+	color: #666;
+	font: normal 14px "Lucida Sans", sans-serif;
+	margin: 0 0 20px 0;
+	line-height: 20px;
+}
+
+
+.about h2, .works h2, .discounts h2, .rebates h2, .savings h2, .moneymanagement h2 {
+	font: normal 12px "Lucida Sans", sans-serif;
+	width: 625px;
+	margin: 10px 0 20px 0;
+	color: #666666;
+}
+
+.about p, .works p, .discounts p, .rebates p, .savings p, .contact p, .moneymanagement p {
+	margin: 0 0 20px 0;
+	width: 625px;
+	line-height: 20px;
+	color:#666666;
+}
+
+.account-contact p {
+	margin: 0 0 20px 0;
+	width: 625px;
+	line-height: 20px;
+	color: #000;
+}
+
+.account-contact table{
+	margin: 0 0 0 40px;
+}
+
+.account-contact table tr td {
+	color: #666;
+	font: normal 14px "Lucida Sans", sans-serif;
+	margin: 0 0 20px 0;
+	line-height: 20px;
+}
+
+.misc h4 {
+	color: #666;
+	font: bold 16px "Lucida Sans", sans-serif;
+	margin: 10px 0 10px 0;
+	width: 380px;
+	line-height: 16px;
+}
+
+.misc h3 {
+	font: normal 16px "Lucida Sans", sans-serif;
+	width: 380px;
+	margin: 10px 0 10px 0;
+}
+
+.misc h2 {
+	font: normal 14px "Lucida Sans", sans-serif;
+	width: 380px;
+	margin: 10px 0 20px 0;
+}
+
+
+.misc p {
+	color: #666;
+	font: normal 12px "Lucida Sans", sans-serif;
+	margin: 0 0 20px 0;
+	width: 380px;
+	line-height: 20px;
+}
+
+ol {
+	text-align: left;
+	font: normal 12px "Lucida Sans", sans-serif;
+	color:#666;
+	margin: 20px 0 10px 40px;
+}
+
+.about ul, .works ul, .discounts ul, .rebates ul, .savings ul, .moneymanagement ul {
+	text-align: left;
+	font: normal 12px "Lucida Sans", sans-serif;
+	color: #666;
+	margin: 20px 0 10px 40px;
+	width: 625px;
+}
+
+li {
+	padding: 0 0 10px 0;
+}
+
+.misc ol {
+	text-align: left;
+	font: normal 12px "Lucida Sans", sans-serif;
+	margin: 20px 0 10px 40px;
+	width: 380px;
+	line-height: 16px;
+}
+
+.misc ol li ul {
+	margin: 10px 0 0 40px;
+}
+
+#login-content{
+	float: left;
+	width: 720px;
+}
+
+#login-logo-dashboard {
+	float: right;
+	width: 220px;
+	height: 400px;
+	
+	margin: 0 auto;
+}
+
+/* END LAYOUT */
+
+/* TOP NAV */
+
+#top-nav ul {
+    margin:0;
+    padding:0;
+    list-style:none;
+}
+	
+#top-nav li {
+    float:right;
+    margin:0 0 0 20px;
+    padding:0;
+	width: 25px;
+}
+
+#top-nav a, #top-nav strong, #top-nav span {
+	float:left;
+    display:block;
+    padding:0;
+	text-decoration: underline;
+	font: normal 12px "Lucida Sans", sans-serif;
+	color: #336699; 
+} 
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+	#top-nav a {float:none;}
+/* End IE5-Mac hack */	
+	
+#top-nav a:hover {
+	color:#336699;
+	text-decoration: none;
+}
+
+ #top-nav img {
+	margin: 0;
+	padding: 0 0 0 2px;
+}
+
+/* SLIDING DOOR NAVIGATION TABS */
+#bottom-nav ul {
+    margin:35px 0 0 0;
+    padding:0;
+    list-style:none;
+}
+	
+#bottom-nav li {
+    float:right;
+	background:url("../images/left.gif") no-repeat left top; 
+    margin:0;
+    padding:0 0 0 9px;
+} 
+	
+#bottom-nav a, #bottom-nav strong, #bottom-nav span {
+	float:left;
+    display:block;
+	background:url("../images/right.gif") no-repeat right top;
+    padding:5px 15px 4px 6px;
+	text-decoration: none;
+	font: normal 12px "Lucida Sans", sans-serif;
+	color: #2252A6; 
+} 
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+	#bottom-nav a {float:none;}
+/* End IE5-Mac hack */	
+	
+#bottom-nav a:hover {
+	color:#2252A6;
+}
+	
+#bottom-nav .current {
+    background-image:url("../images/left_on.gif");
+}
+	
+#bottom-nav .current a {
+    background-image:url("../images/right_on.gif");
+	color: #fff;
+}
+
+/* END SLIDING DOOR */
+
+/* SUB NAVIGATION */
+
+#sub-navigation {
+	float: left;
+	width: 100%;
+	margin: 10px 0;
+	padding: 0;
+	border-bottom: 1px solid #909090;
+
+}
+
+#sub-navigation ul {
+    list-style:none;
+}
+	
+#sub-navigation li {
+    float:left;
+    margin:0 20px 10px 0;
+    padding:0;
+	color: #909090;
+}
+
+#sub-navigation a, #sub-navigation strong, #sub-navigation span {
+	float:left;
+    display:block;
+    padding:0;
+	text-decoration: none;
+	font: normal 16px "Lucida Sans", sans-serif;
+	color: #909090; 
+} 
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+	#sub-navigation a {float:none;}
+/* End IE5-Mac hack */	
+	
+#sub-navigation a:hover {
+	color:#315DA8;
+	text-decoration: none;
+}
+
+#sub-navigation #current a {
+	color: #315DA8;
+}
+
+/* FOOTER NAV */
+#footer ul {
+    margin: 0 0 0 305px;
+    padding:0;
+    list-style:none;
+}
+	
+#footer li {
+    float:left;
+    margin:0;
+    padding:0 10px 0 0;
+	font: normal 11px "Lucida Sans", sans-serif;
+	color: #2252A6;
+}
+
+#footer a, #footer strong, #footer span {
+	float:left;
+    display:block;
+    padding:0;
+	text-decoration: none;
+	font: normal 11px "Lucida Sans", sans-serif;
+	color: #2252A6; 
+} 
+/* Commented Backslash Hack hides rule from IE5-Mac \*/
+	#footer a {float:none;}
+/* End IE5-Mac hack */	
+	
+#footer a:hover {
+	text-decoration: underline;
+}
+
+/* END FOOTER NAV */
+
+/* SPIFFY ROUND CORNERS */
+.spiffy{display:block}
+.spiffy *{
+  display:block;
+  height:1px;
+  overflow:hidden;
+  font-size:.01em;
+  background:#2252A6
+}
+
+.spiffy1{
+  margin-left:3px;
+  margin-right:3px;
+  padding-left:1px;
+  padding-right:1px;
+  border-left:1px solid #492347;
+  border-right:1px solid #492347;
+  background:#333d7c
+}
+
+.spiffy2{
+  margin-left:1px;
+  margin-right:1px;
+  padding-right:1px;
+  padding-left:1px;
+  border-left:1px solid #610810;
+  border-right:1px solid #610810;
+  background:#2f4286
+}
+
+.spiffy3{
+  margin-left:1px;
+  margin-right:1px;
+  border-left:1px solid #2f4286;
+  border-right:1px solid #2f4286;
+}
+
+.spiffy4{
+  border-left:1px solid #492347;
+  border-right:1px solid #492347
+}
+
+.spiffy5{
+  border-left:1px solid #333d7c;
+  border-right:1px solid #333d7c
+}
+
+.spiffyfg{
+  background:#2252A6
+}
+/* END SPIFFY */
+
+/* FORM ELEMENTS */
+form {
+	margin: 0 0 0 10px;
+	padding: 0;
+}
+
+fieldset {
+	border: none;
+	margin: 1px 0 0 0;
+	padding: 0;
+	text-align: left;
+}
+
+fieldset label.registration {
+	font: italic 14px "Lucida Sans", sans-serif;
+	color: #FFFFFF;
+	display: block;
+}
+
+input.registration {
+	width: 187px;
+	height: 23px;
+	border: none;
+	font: bold 14px "Lucida Sans", sans-serif;
+	margin: 10px 0 0 10px;
+	padding: 5px 0 0 0;
+}
+
+#go {
+	float: right;
+	width: 50px;
+	height:37px;
+	margin: 10px 20px 0 0;
+}
+
+.forgot {
+	color: #FFA715;
+	text-decoration: underline;
+	font-style: italic;
+	float:left;
+	margin: 20px 0 0 0;
+}
+
+.cards {
+	width: 163px;
+	height: 164px;
+	float: left;
+	border: none;
+	margin: 5px 10px 5px 0;
+}
+
+.dashboard-panel h1 {
+	color: #2252A6;
+	font: bold 14px "Lucida Sans", sans-serif;
+	text-align: left;
+	margin: 0;
+	padding: 5px 0 5px 5px;
+}
+
+.dashboard-panel p {
+	color: #A3A2A1;
+	font: normal 10px "Lucida Sans", sans-serif;
+	line-height: 12px;
+	text-align: left;
+	margin: 0;
+	padding: 0 0 5px 5px;
+}
+
+.smprint {
+	font: italic 10px "Lucida Sans", sans-serif;
+}
+
+.grey {
+	color: #666;
+}
+
+/*
+#errorMsg {
+	display: none;
+}
+
+#registration #errorMsg p {
+	color: #2252A6;
+}
+*/
