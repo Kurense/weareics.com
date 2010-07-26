@@ -1,575 +1,1071 @@
 <html>
 <head>
+
 <meta http-equiv="Content-Language" content="en-us">
+
 <link rel="stylesheet" href="sitecss.css" type="text/css">
+
 <meta name="GENERATOR" content="Microsoft FrontPage 5.0">
+
 <meta name="ProgId" content="FrontPage.Editor.Document">
+
 <meta http-equiv="Content-Type" content="text/html; charset=windows-1252">
+
 <title>Innovative Card Solutions</title>
 <script type="text/javascript">
 function getposOffset(overlay, offsettype){
+
 var totaloffset=(offsettype=="left")? overlay.offsetLeft : overlay.offsetTop;
+
 var parentEl=overlay.offsetParent;
+
 while (parentEl!=null){
+
 totaloffset=(offsettype=="left")? totaloffset+parentEl.offsetLeft : totaloffset+parentEl.offsetTop;
+
 parentEl=parentEl.offsetParent;
+
 }
+
 return totaloffset;
+
 }
 function overlay(curobj, subobjstr, opt_position){
+
 if (document.getElementById){
+
 var subobj=document.getElementById(subobjstr)
+
 subobj.style.display=(subobj.style.display!="block")? "block" : "none"
+
 var xpos=getposOffset(curobj, "left")+((typeof opt_position!="undefined" && opt_position.indexOf("right")!=-1)? -(subobj.offsetWidth-curobj.offsetWidth) : 135) 
+
 var ypos=getposOffset(curobj, "top")+((typeof opt_position!="undefined" && opt_position.indexOf("bottom")!=-1)? curobj.offsetHeight : 0)
+
 subobj.style.left=xpos+"px"
+
 subobj.style.top=ypos+"px"
+
 return false
+
 }
+
 else
+
 return true
+
 }
 function overlayclose(subobj){
+
 document.getElementById(subobj).style.display="none"
+
 }
 </script>
+
 
 
 <script language="JavaScript">
+
 <!-- begin hide from older browsers
 if (document.images) 
+
 	rollovers = 1;
+
 else 
+
     rollovers = 0;
+
         
+
 if (rollovers)
+
 {
 topnav1 = new Image();
+
 topnav1.src = "images/navbar_01.jpg";
+
 topnav1_ = new Image();
+
 topnav1_.src = "images/navbar__01.jpg";
+
 //topnav1d = new Image();
+
 //topnav1d.src = "topnav1d.gif";
 topnav2 = new Image();
+
 topnav2.src = "images/navbar_02.jpg";
+
 topnav2_ = new Image();
+
 topnav2_.src = "images/navbar__02.jpg";
+
 //topnav2d = new Image();
+
 //topnav2d.src = "topnav2d.gif";
 topnav3 = new Image();
+
 topnav3.src = "images/navbar_03.jpg";
+
 topnav3_ = new Image();
+
 topnav3_.src = "images/navbar__03.jpg";
+
 //topnav3d = new Image();
+
 //topnav3d.src = "topnav3d.gif";
 topnav4 = new Image();
+
 topnav4.src = "images/navbar_04.jpg";
+
 topnav4_ = new Image();
+
 topnav4_.src = "images/navbar__04.jpg";
+
 //topnav4d = new Image();
+
 //topnav4d.src = "topnav4d.gif";
 
+
 }
+
 
 function setImageOn( imgName ) {
+
 	if ( rollovers ) {
+
 			document[imgName].src = eval( imgName + "_.src" );
+
 			//document["centerdesc"].src = eval( imgName + "d.src" );
+
 	}
+
 	return true;
+
 }
 
+
 function setImageOff( imgName ) {
+
 	if ( rollovers ) {
+
 			document[imgName].src = eval( imgName + '.src' );
+
 			//document["centerdesc"].src = "topnav1d.gif";
+
 	}
+
 	return true;
+
 }
 // -->
+
 </script>
 <script type="text/javascript">
 
+
 var enablepersist="on" //Enable saving state of content structure using session cookies? (on/off)
+
 var collapseprevious="no" //Collapse previously open content when opening present? (yes/no)
 var contractsymbol='<img src="images/minus.jpg">' 
+
 var expandsymbol='<img src="images/plus.jpg">' 
 
+
 if (document.getElementById){
+
 document.write('<style type="text/css">')
+
 document.write('.switchcontent{display:none;}')
+
 document.write('</style>')
+
 }
 function getElementbyClass(rootobj, classname){
+
 var temparray=new Array()
+
 var inc=0
+
 var rootlength=rootobj.length
+
 for (i=0; i<rootlength; i++){
+
 if (rootobj[i].className==classname)
+
 temparray[inc++]=rootobj[i]
-}
-return temparray
-}
-function sweeptoggle(ec){
-var thestate=(ec=="expand")? "block" : "none"
-var inc=0
-while (ccollect[inc]){
-ccollect[inc].style.display=thestate
-inc++
-}
-revivestatus()
+
 }
 
-function contractcontent(omit){
-var inc=0
-while (ccollect[inc]){
-if (ccollect[inc].id!=omit)
-ccollect[inc].style.display="none"
-inc++
+return temparray
+
 }
+function sweeptoggle(ec){
+
+var thestate=(ec=="expand")? "block" : "none"
+
+var inc=0
+
+while (ccollect[inc]){
+
+ccollect[inc].style.display=thestate
+
+inc++
+
+}
+
+revivestatus()
+
+}
+
+
+function contractcontent(omit){
+
+var inc=0
+
+while (ccollect[inc]){
+
+if (ccollect[inc].id!=omit)
+
+ccollect[inc].style.display="none"
+
+inc++
+
+}
+
 }
 function expandcontent(curobj, cid){
+
 var spantags=curobj.getElementsByTagName("SPAN")
+
 var showstateobj=getElementbyClass(spantags, "showstate")
+
 if (ccollect.length>0){
+
 if (collapseprevious=="yes")
+
 contractcontent(cid)
+
 document.getElementById(cid).style.display=(document.getElementById(cid).style.display!="block")? "block" : "none"
+
 if (showstateobj.length>0){ //if "showstate" span exists in header
+
 if (collapseprevious=="no")
+
 showstateobj[0].innerHTML=(document.getElementById(cid).style.display=="block")? contractsymbol : expandsymbol
+
 else
+
 revivestatus()
+
 }
+
 }
+
 }
 function revivecontent(){
+
 contractcontent("omitnothing")
+
 selectedItem=getselectedItem()
+
 selectedComponents=selectedItem.split("|")
+
 for (i=0; i<selectedComponents.length-1; i++)
+
 document.getElementById(selectedComponents[i]).style.display="block"
+
 }
 function revivestatus(){
+
 var inc=0
+
 while (statecollect[inc]){
+
 if (ccollect[inc].style.display=="block")
+
 statecollect[inc].innerHTML=contractsymbol
+
 else
+
 statecollect[inc].innerHTML=expandsymbol
+
 inc++
+
 }
+
 }
 function get_cookie(Name) { 
+
 var search = Name + "="
+
 var returnvalue = "";
+
 if (document.cookie.length > 0) {
+
 offset = document.cookie.indexOf(search)
+
 if (offset != -1) { 
+
 offset += search.length
+
 end = document.cookie.indexOf(";", offset);
+
 if (end == -1) end = document.cookie.length;
+
 returnvalue=unescape(document.cookie.substring(offset, end))
+
 }
+
 }
+
 return returnvalue;
+
 }
 function getselectedItem(){
+
 if (get_cookie(window.location.pathname) != ""){
+
 selectedItem=get_cookie(window.location.pathname)
+
 return selectedItem
+
 }
+
 else
+
 return ""
+
 }
 function saveswitchstate(){
+
 var inc=0, selectedItem=""
+
 while (ccollect[inc]){
+
 if (ccollect[inc].style.display=="block")
+
 selectedItem+=ccollect[inc].id+"|"
+
 inc++
+
 }
 document.cookie=window.location.pathname+"="+selectedItem
+
 }
 function do_onload(){
+
 uniqueidn=window.location.pathname+"firsttimeload"
+
 var alltags=document.all? document.all : document.getElementsByTagName("*")
+
 ccollect=getElementbyClass(alltags, "switchcontent")
+
 statecollect=getElementbyClass(alltags, "showstate")
+
 if (enablepersist=="on" && ccollect.length>0){
+
 document.cookie=(get_cookie(uniqueidn)=="")? uniqueidn+"=1" : uniqueidn+"=0" 
+
 firsttimeload=(get_cookie(uniqueidn)==1)? 1 : 0 //check if this is 1st page load
+
 if (!firsttimeload)
+
 revivecontent()
+
 }
+
 if (ccollect.length>0 && statecollect.length>0)
+
 revivestatus()
+
 }
 if (window.addEventListener)
+
 window.addEventListener("load", do_onload, false)
+
 else if (window.attachEvent)
+
 window.attachEvent("onload", do_onload)
+
 else if (document.getElementById)
+
 window.onload=do_onload
 if (enablepersist=="on" && document.getElementById)
+
 window.onunload=saveswitchstate
 </script>
+
 
 </head>
 <body topmargin="0" leftmargin="0">
 <div align="center">
+
   <center>
+
   <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="780" id="AutoNumber1">
+
     <tr>
+
       <td>
+
       <img border="0" src="../corpsite2/images/trans_spacer_gif.gif" width="1" height="5"></td>
+
     </tr>
+
   </table>
+
   <div align="center">
+
     <center>
+
     <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="780" id="AutoNumber2">
+
       <tr>
+
         <td width="188">
+
         <a href="index.htm">
+
         <img border="0" src="images/cf_logo.jpg"></a></td>
+
         <td width="592">
+
         <p align="right">
+
         <img border="0" src="images/tag.jpg" width="350" height="58"></td>
+
       </tr>
+
     </table>
+
     <div align="center">
+
       <center>
+
       <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="780" id="AutoNumber3">
+
         <tr>
+
           <td>
+
           <img border="0" src="../corpsite2/images/trans_spacer_gif.gif" width="1" height="5"></td>
+
         </tr>
+
       </table>
+
       <div align="center">
+
         <center>
+
         <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="780" id="AutoNumber4">
+
           <tr>
+
             <td>
+
             <img border="0" src="images/navbar__01.jpg" width="195" height="50"><a onmouseover="setImageOn( 'topnav2' )" onmouseout="setImageOff( 'topnav2' )" href="productshome.htm"><img src="images/navbar_02.jpg" alt="" name="topnav2" border="0" loop="0" width="195" height="50"></a><a onmouseover="setImageOn( 'topnav3' )" onmouseout="setImageOff( 'topnav3' )" href="customershome.htm"><img src="images/navbar_03.jpg" alt="" name="topnav3" border="0" loop="0" width="195" height="50"></a><a onmouseover="setImageOn( 'topnav4' )" onmouseout="setImageOff( 'topnav4' )" href="contacthome.htm"><img src="images/navbar_04.jpg" alt="" name="topnav4" border="0" loop="0" width="195" height="50"></a></td>
+
           </tr>
+
         </table>
+
         <div align="center">
+
           <center>
+
           <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="780" id="AutoNumber5">
+
             <tr>
+
               <td>
+
               <img border="0" src="../corpsite2/images/trans_spacer_gif.gif" width="1" height="10"></td>
+
             </tr>
+
           </table>
+
           <div align="center">
+
             <center>
+
             <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="780" id="AutoNumber6" height="1">
+
               <tr>
+
                 <td width="167" height="1">
+
                 <img border="0" src="images/trans_spacer_gif.gif" width="200" height="1"></td>
+
                 <td width="613" height="1" colspan="3">
+
                 <img border="0" src="images/trans_spacer_gif.gif" width="580" height="1"></td>
+
               </tr>
+
               <tr>
+
                 <td width="167" valign="top" rowspan="4" height="1">
+
                 <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="200" id="AutoNumber11">
+
                   <tr>
+
                     <td width="100%">
+
                     <img border="0" src="images/navtop.jpg" width="200" height="25"></td>
+
                   </tr>
+
                 </table>
+
                 <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="200" id="AutoNumber12">
+
                   <tr>
+
                     <td width="200" colspan="4">
+
               <img border="0" src="../corpsite2/images/trans_spacer_gif.gif" width="1" height="5"></td>
+
                   </tr>
+
                   <tr>
+
                     <td width="7">&nbsp;</td>
+
                     <td width="17" align="right">
+
                     <img border="0" src="images/nav_plus.jpg" width="11" height="11"></td>
+
                     <td width="153">
+
                     <font face="Verdana" size="1" color="#666666">
+
                     &nbsp;<a class="subnav" href="companyhome.htm">Company 
+
                     Overview</a></font></td>
+
                     <td width="23">&nbsp;</td>
+
                   </tr>
+
                   <tr>
+
                     <td width="24" colspan="2">
+
                     <img border="0" src="images/trans_spacer_gif.gif" width="1" height="1"></td>
+
                     <td width="176" colspan="2">
+
                     <img border="0" src="images/nav_line.jpg" width="130" height="1"></td>
+
                   </tr>
+
                   <tr>
+
                     <td width="7">&nbsp;</td>
+
                     <td width="17" align="right">
+
                     <img border="0" src="images/nav_plus.jpg" width="11" height="11"></td>
+
                     <td width="153">
+
                     <font face="Verdana" size="1" color="#666666">
+
                     &nbsp;<b><a class="subnav" href="companyleadership.htm"><font color="#356B8F">Leadership</font></a></b></font></td>
+
                     <td width="23">&nbsp;</td>
+
                   </tr>
+
                   <tr>
+
                     <td width="24" colspan="2">
+
                     <img border="0" src="images/trans_spacer_gif.gif" width="1" height="1"></td>
+
                     <td width="176" colspan="2">
+
                     <img border="0" src="images/nav_line.jpg" width="130" height="1"></td>
+
                   </tr>
+
                   <tr>
+
                     <td width="7">&nbsp;</td>
+
                     <td width="17" align="right">
+
                     <img border="0" src="images/nav_plus.jpg" width="11" height="11"></td>
+
                     <td width="153">
+
                     <font face="Verdana" size="1" color="#666666">
+
                     &nbsp;<a class="subnav" href="companypress.htm">Press Releases</a></font></td>
+
                     <td width="23">&nbsp;</td>
+
                   </tr>
+
                   <tr>
+
                     <td width="24" colspan="2">
+
                     <img border="0" src="images/trans_spacer_gif.gif" width="1" height="1"></td>
+
                     <td width="176" colspan="2">
+
                     <img border="0" src="images/nav_line.jpg" width="130" height="1"></td>
+
                   </tr>
+
                   <tr>
+
                     <td width="7">&nbsp;</td>
+
                     <td width="17" align="right">
+
                     <img border="0" src="images/nav_plus.jpg" width="11" height="11"></td>
+
                     <td width="153">
+
                     <font face="Verdana" size="1" color="#666666">
+
                     &nbsp;<a class="subnav" href="companycareers.htm">Careers</a></font></td>
+
                     <td width="23">&nbsp;</td>
+
                   </tr>
+
                   <tr>
+
                     <td width="24" colspan="2">
+
                     <img border="0" src="images/trans_spacer_gif.gif" width="1" height="1"></td>
+
                     <td width="176" colspan="2">
+
                     <img border="0" src="images/nav_line.jpg" width="130" height="1"></td>
+
                   </tr>                  
+
                   <tr>
+
                     <td width="7">&nbsp;</td>
+
                     <td width="17" align="right">
+
                     <img border="0" src="images/nav_plus.jpg" width="11" height="11"></td>
+
                     <td width="153">
+
                     <font face="Verdana" size="1" color="#666666">
+
                     &nbsp;<a class="subnav" href="companypartners.htm">Partners</font></a></b></font></td>
+
                     <td width="23">&nbsp;</td>
+
                   </tr>
+
                   <tr>
+
                     <td width="24" colspan="2">
+
                     <img border="0" src="images/trans_spacer_gif.gif" width="1" height="1"></td>
+
                     <td width="176" colspan="2">
+
                     &nbsp;</td>
+
                   </tr>
+
                   <tr>
+
                     <td width="24" colspan="2">&nbsp;</td>
+
                     <td width="153">&nbsp;</td>
+
                     <td width="23">&nbsp;</td>
+
                   </tr>
+
                   
+
                    <tr>
+
                     <td width="24" colspan="2">&nbsp;</td>
+
                     <td width="153">&nbsp;</td>
+
                     <td width="23">&nbsp;</td>
+
                   </tr>
+
                   <tr>
+
                     <td width="200" colspan="4">
+
                     <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="200" id="AutoNumber13" height="137">
+
                       <tr>
+
                         <td colspan="3" width="200" height="25">
+
                         <img border="0" src="images/additional_resources.jpg" width="200" height="25"></td>
+
                       </tr>
+
                       <tr>
+
                         <td width="15" height="10">
+
                 <img border="0" src="images/trans_spacer_gif.gif" width="1" height="1"></td>
+
                         <td width="14" height="10">
+
                 <img border="0" src="images/trans_spacer_gif.gif" width="1" height="1"></td>
+
                         <td width="171" height="10">
+
                 <img border="0" src="images/trans_spacer_gif.gif" width="1" height="1"></td>
+
                       </tr>
+
                       <tr>
+
                         <td width="15" height="19">&nbsp;</td>
+
                         <td width="14" height="19">
+
                         <img border="0" src="images/additional_arrow.jpg" width="11" height="11"></td>
+
                         <td width="171" height="19">
+
                         <font face="Verdana" size="1">
+
                         <a class="infocus" href="productshome.htm">Product Overview</a></font></td>
+
                       </tr>
+
                       <tr>
+
                         <td width="15" height="19">&nbsp;</td>
+
                         <td width="14" height="19">
+
                         <img border="0" src="images/additional_arrow.jpg" width="11" height="11"></td>
+
                         <td width="171" height="19">
+
                         <font face="Verdana" size="1">
+
                         <a class="infocus" href="customershome.htm">Customer 
+
                         Profiles</a></font></td>
+
                       </tr>
+
                       
                         
+
                       </tr>
+
                       <tr>
+
                         <td width="15" height="19">&nbsp;</td>
+
                         <td width="14" height="19">&nbsp;</td>
+
                         <td width="171" height="19">&nbsp;</td>
+
                       </tr>
+
                       <tr>
+
                         <td width="15" height="19">&nbsp;</td>
+
                         <td width="14" height="19">&nbsp;</td>
+
                         <td width="171" height="19">&nbsp;</td>
+
                       </tr>
+
                       <tr>
+
                         <td width="15" height="7"></td>
+
                         <td width="14" height="7"></td>
+
                         <td width="171" height="7"></td>
+
                       </tr>
+
                     </table>
+
                     </td>
+
                   </tr>
+
                 </table>
+
                 </td>
+
                 <td width="613" valign="top" height="1" colspan="3">
+
                 <img border="0" src="images/company_header_leadership.jpg" width="580" height="80"></td>
+
               </tr>
+
               <tr>
+
                 <td width="613" valign="top" height="6" colspan="3">
+
                 <img border="0" src="images/trans_spacer_gif.gif" width="1" height="9"></td>
+
               </tr>
+
               <tr>
+
                 <td width="613" valign="top" height="13" colspan="3">
+
                 <img border="0" src="images/bodytop.jpg" width="580" height="25"></td>
+
               </tr>
+
               <tr>
+
                 <td width="12" valign="top" height="221">&nbsp;<p>&nbsp;</p>
+
                 <p>&nbsp;</p>
+
                 <p>&nbsp;</p>
+
                 <p>&nbsp;</p>
+
                 <p>&nbsp;</p>
+
                 <p>&nbsp;</td>
+
                 <td width="557" valign="top" height="221">
+
             <p class="MsoNormal"><font face="Verdana" size="1" color="#666666">Innovative's leaders are experienced professionals with diverse backgrounds in the financial services, technology, distribution, product development and marketing industry sectors.  Together, our management team is leading a company that is excited about extending the reach of plastic into new areas to be explored and developed.</font></p>
+
             <font color="#666666" face="Verdana" size="1">
 <h3 onClick="expandcontent(this, 'sc1')" style="cursor:hand; cursor:pointer"></span><span class="showstate"></span><font size="1">William G. Mays, Chairman</font></h3>
+
 <div id="sc1" class="switchcontent"><p>
+
 Serving as Chairman of Innovative Card Solutions, William Mays is President of Mays Chemical Company, headquartered in Indianapolis, Indiana.  Mays Chemical has over $200 million in sales and more than 190 employees, with facilities in Indianapolis, Chicago, Detroit, Cincinnati, Canada and Puerto Rico.  The 21-year-old company is a fully integrated chemical distributor offering chemicals and other related raw materials, cleaning and sanitation products, outsourcing services, consolidation and materials management programs.<br /><br />
+
 Mays Chemical has proven capable of doing business on a national basis with clients such as Eli Lilly, Abbott, DaimlerChrysler, Ford Motor, General Mills, General Motors, Kellogg U.S.A., Kraft Foods, Pharmacia, Philip Morris and Procter and Gamble. Mays Chemical has won numerous awards for excellence including the General Motors Outstanding Supplier of the Year award, given to the one percent of their top suppliers worldwide.<br /><br />
+
 Mr. Mays serves on a wide variety of for-profit and non-profit boards and organizations.  Currently he serves as a director of the boards of Anthem Insurance, Inc.; Bank One, Indiana; Indiana State Chamber of Commerce; Indiana University Foundation and Indiana University President’s Council; Indianapolis Chamber of Commerce; National Minority Supplier Development Council; National Urban League and United Way of Central Indiana.  He is also involved with the National Commission on Entrepreneurship; United Negro College Fund; the National Alumni Giving Drive for the Consortium for Graduate Study in Management; and is co-chair of the annual Coca-Cola Circle City Classic.  The list of honors and awards for Mr. Mays is lengthy.<br /><br />
+
 William G. Mays received his B.A. in chemistry and master’s degree in business administration from Indiana University.  He has received three honorary doctorates.<br /><br />
+
 </p></div>
 <h3 onClick="expandcontent(this, 'sc2')" style="cursor:hand; cursor:pointer"></span><span class="showstate"></span><font size="1">Damon A. Goins, President and CEO</font></h3>
+
 <div id="sc2" class="switchcontent">
+
 <p>
+
 As Chief Executive Officer for Innovative Card Solution, LLC, Damon guides the overall vision of the company and directs all aspects of an organization's policies, objectives, and responsible for the short- and long-term profitability and growth of the company.<br /><br />
+
 Prior to Innovative Card Solutions, Damon was a Certified IT Project Manager (PMP) with IBM. For over two decades, Damon has had extensive experience in managing the information technology and processing systems for companies such as Electronic Data Systems (EDS), Xerox Corporation, as well as a consulting position with International Business Systems (IBM) Global Services Division.  His accomplishments include the management of datacenter migrations and the Enterprise Resource Planning software for major clients including Sony Electronics, AT&T, Wisconsin Power and Light and a host of others.<br /><br />
+
 Damon received a B.S. Degree in Computer Science and Information Technology from Kentucky State University.
+
 </p>
+
 </div>
-<h3 onClick="expandcontent(this, 'sc3')" style="cursor:hand; cursor:pointer"></span><span class="showstate"></span><font face="Verdana" size="1"><font color="#666666"><font size="1">Mathew B. Murphy III, Board Member and Director of Financial Services</font></h3>
+<h3 onClick="expandcontent(this, 'sc3')" style="cursor:hand; cursor:pointer"></span><span class="showstate"></span><font face="Verdana" size="1"><font color="#666666"><font size="1">Mathew B. Murphy III, Chief Financial Officer</font></h3>
+
 <div id="sc3" class="switchcontent"><p>
+
 Serving as Director of Financial Services for Innovative Card Solutions, Matt is the Director of Finance and Administration for Mays Chemical Company, Inc., one of the nation¹s largest chemical distributor. As a key member of its Senior Management Team, Mr. Murphy directs the administrative functions of the company’s ongoing acquisition and strategic planning efforts. Additionally, Matt provides daily financial oversight and management of the vast investment interests of the company’s owner, William G. Mays.<br /><br />
+
 Prior to joining Mays Chemical in 1996 Matt served as Senior Vice President of Corporate Lending, Marketing, and Business Development at Huntington Bank, in addition to being a member of its Senior Loan Committee. He held similar positions in Commercial Lending at both Merchants National Bank and Midwest National Bank. During his 15-year tenure in the banking industry, he developed an extensive resume of financial expertise. Matt is a founding member and past treasurer of Indianapolis Urban Bankers; an appointee of the Lynx Capital Corporation Investment Committee.<br /><br />
+
 In June 2005, Governor Mitch Daniels announced Matt’s appointment to the Board of Trustees of the Public Employee’s Retirement Fund of Indiana, the state’s largest public pension fund with assets in excess of $16 Billion. Admirable appointments by preceding Indiana Governors include; Director of the Indiana Health Facility Financing Authority, and appointment as Chairman & Trustee of the Indiana State Teacher’s Retirement Fund, the state’s second largest public pension fund.<br /><br />
+
 Matt received a B.S. Degree in 1980 from Indiana University, Bloomington, majoring in Management & Administration and with a minor in Finance at the Kelley School of Business.
-</p></div>
-          
-<h3 onClick="expandcontent(this, 'sc4')" style="cursor:hand; cursor:pointer"></span><span class="showstate"></span><font face="Verdana" size="1"><font color="#666666">
-<font size="1">Shawn Hamilton, Chief Financial Officer</font> </h3>
-<div id="sc4" class="switchcontent"><p>
-Serving as Chief Financial Officer for Innovative Card Solutions, Shawn oversees various financial and budget analyses in the areas of account reconciliation, revenue forecasting, capital expenditures, and a wide variety of accounting and statistical data and reports.<br /><br />
-Prior to joining Innovative Card Solutions, Shawn has experience creating financial analysis and strategy solutions for products and services for well over a decade.  With Procter & Gamble for nearly 15 years, Shawn has been involved in several major business interventions.  These include:
-<ul>
-    <li>New product launch financial assessment and success criteria development</li>
-    <li>Global profit forecasting, to include the impacts of foreign currency exchange</li>
-    <li>Management of major (> $200M) capital expansion projects</li>
-    <li>Management and forecasting of > $350M manufacturing expense budgets</li>
-</ul>
-In addition, Shawn has successfully become a Certified Internal Auditor and has been involved in Sarbanes-Oxley compliance and other controls issues.  This includes being the Project Manager and lead author for Procter & Gamble’s Worldwide Business Conduct Manual.<br /><br />
-Shawn has a Bachelor of Science degree in Mechanical Engineering and a Master of Business Administration degree in Finance.  Both degrees are from Washington University in St. Louis.
+
 </p></div>
 
+
+
 <h3 onClick="expandcontent(this, 'sc5')" style="cursor:hand; cursor:pointer"></span><span class="showstate"></span><font face="Verdana" size="1"><font color="#666666">
+
 <font size="1">Wyatt Goins, Chief Operations Officer</h3>
+
 <div id="sc5" class="switchcontent"><p>
+
 As Chief Operations Officer for Innovative Card Solutions, Wyatt oversees day-to-day business operations, policies, objectives, and initiatives of the organization to ensure future growth. He is also responsible for the attainment of short- and long-term financial and operational goals.<br /><br />
+
 Prior to joining Innovative Card Solutions, Wyatt’s career reflects 16 years of extensive marketing experience as a Managing Director for many high-profile customers including Fifth Third Bank, Sara Lee, Limitedbrands, Cincinnati Bell and International Paper.<br /><br />
+
 Wyatt received a B.S. Degree in Business Administration and Marketing from Urbana University.
+
 </p></div>
            
 <h3 onClick="expandcontent(this, 'sc6')" style="cursor:hand; cursor:pointer"></span><span class="showstate"></span><font face="Verdana" size="1"><font color="#666666">
+
 <font size="1">Jennifer Nenadov, Chief Technology Officer</font></h3>
+
 <div id="sc6" class="switchcontent"><p>
+
 Jennifer currently serves as the Chief Technology Officer for Innovative Card Solutions.  As Chief Technology Officer, Jennifer manages and oversees all IT operations, including the real-time card authorization infrastructure and customer web access portals.<br /><br />
+
 Prior to joining ICS, Jennifer played an integral role in the launch of over 20 custom card programs during her career by means of establishing and managing various Relationship Management, Project Management, and Card Solutions teams. Jennifer also worked at Fifth Third Bank in various Risk Management and Product Management roles.  While at Fifth Third, Jennifer collaborated to launch several new card products - Paypass Debit Card, World MasterCard Credit Card, Secured Credit Card, and Health Savings Accounts.<br /><br />
+
 Jennifer holds a B.S. in Accounting from the University of Akron and an MBA from Xavier University.
+
 </p></div> 
 <h3 onClick="expandcontent(this, 'sc7')" style="cursor:hand; cursor:pointer"></span><span class="showstate"></span><font face="Verdana" size="1"><font color="#666666">
+
 <font size="1">Wade Goins, Chief Marketing Officer</font></h3>
+
 <div id="sc7" class="switchcontent"><p>
+
 Wade serves a Chief Marketing Officer for Innovative Card Solutions. Wade plans and directs the organization's marketing policies, objectives, and initiatives. Conducts market research and develops marketing plans for specific products, services, or business lines. As well as, review changes to the marketplace and industry and adjusts marketing plan accordingly.<br /><br />
+
 Prior to joining Innovative Card Solutions, Wade initiated and implemented a wide range of fully integrated, award-winning campaigns over the past 16 year as a Creative Director for clients including Provident Bank, University of Cincinnati, Toyota, Procter & Gamble, Wendy’s and The Kroger Co.<br /><br />
+
 Wade received a Bachelor of Science in Business Administration and Marketing from Urbana University.
+
 </p></div>
           <p class="MsoNormal"><font face="Verdana" size="1" color="#666666"><br />
+
           For more information on Innovative Card Solution's broad array of prepaid debit card programs, visit the <a class="bodytext" href="productshome.htm"><font color="#2D6296">Products</font></a> portion of this site.</font> For all other inquiries, please <a class="bodytext" href="contacthome.htm"><font color="#2D6296">Contact Us</font></a>.
+
           </p>
+
                 </td>
+
                 <td width="11" valign="top" height="221">&nbsp;</td>
+
               </tr>
+
             </table>
+
             <div align="center">
+
               <center>
+
               <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="780" id="AutoNumber7">
+
                 <tr>
+
                   <td width="167">&nbsp;</td>
+
                   <td width="613">&nbsp;</td>
+
                 </tr>
+
               </table>
+
               <div align="center">
+
                 <center>
+
                 <div align="center">
+
                   <center>
+
                   <div align="center">
+
                     <center>
+
                     <table border="0" cellpadding="0" cellspacing="0" style="border-collapse: collapse" bordercolor="#111111" width="780" id="AutoNumber10">
+
                       <tr>
+
                         <td width="780" colspan="2">
+
                         <p align="center">&nbsp;</td>
+
                       </tr>
+
                       <tr>
+
                         <td width="205">
+
                   <img border="0" src="images/trans_spacer_gif.gif" width="200" height="1"></td>
+
                         <td width="575">
+
                 <img border="0" src="images/trans_spacer_gif.gif" width="580" height="1"></td>
+
                       </tr>
+
                       <tr>
+
                         <td width="205">
+
                         &nbsp;</td>
+
                                               </tr>
+
                       <tr>
+
                         <td width="205">
+
                         <p align="center">&nbsp;</td>
+
                         <td width="575">
+
                         <p align="center">
+
                         <span class="copyright"><font face="Verdana" color="#999999" size="1">Copyright © 2010 Innovative Card Solutions. All rights reserved.</font></span>
+
                         </td>
+
                       </tr>
+
                     </table>
+
                     </center>
+
                   </div>
+
                   </center>
+
                 </div>
+
                 </center>
+
               </div>
+
               </center>
+
             </div>
+
             </center>
+
           </div>
+
           </center>
+
         </div>
+
         </center>
+
       </div>
+
       </center>
+
     </div>
+
     </center>
+
   </div>
+
   </center>
+
 </div>
 </body>
 </html>
