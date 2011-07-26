@@ -1,0 +1,25 @@
+:plain
+  ---
+  layout: default
+  ---
+
+.grid_3
+
+  #subnavigation
+    .title Disbursements
+    %ul
+      %li
+        %a{ :href => '/disbursements/claims.html' } Claims
+      %li
+        %a{ :href => '/disbursements/higher_education.html' } Higher Education
+      %li
+        %a{ :href => '/disbursements/reimbursements.html' } Reimbursements
+      %li
+        %a{ :href => '/disbursements/unemployment.html' } Unemployment
+      %li
+        %a{ :href => '/disbursements/workers_compensation.html' } Workers Compensation
+
+.grid_9
+
+  :plain
+    {{ content }}
