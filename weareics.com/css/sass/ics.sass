@@ -5,14 +5,33 @@ body
   font-family: sans-serif
   background: white
 
-#navigation
+#navigation, #subnavigation
   ul
     list-style-type: none
 
-    li
-      display: inline
-      margin-right: 1em
+  a
+    text-decoration: none
+
+#navigation
+  padding: 1em 0
+  border-bottom: 2px solid black
+
+  li
+    display: inline
+    margin-right: 1em
+    text-transform: uppercase
 
 #subnavigation
+  margin-top: 1em
+
+  .title
+    text-transform: uppercase
+
   ul
-    list-style-type: none
+    margin-left: 1em
+
+    li
+      margin-top: 1em
+
+#content
+  margin-top: 1em
