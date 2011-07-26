@@ -4,4 +4,14 @@
   %head
     %title ICS
   %body
-    = '{{ content }}'
+    
+    #navigation
+      %a{ :href => '/about_us.html' } About Us
+      %a{ :href => '/disbursements.html' } Disbursements
+      %a{ :href => '/compensation.html' } Compensation
+      %a{ :href => '/promotions.html' } Promotions
+      %a{ :href => '/case_studies.html' } Case Studies
+      %a{ :href => '/contact.html' } Contact Us
+
+    :plain
+      {{ content }}
