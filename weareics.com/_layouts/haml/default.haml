@@ -8,13 +8,24 @@
     %link{ :href => "/css/ics.css", :rel => "stylesheet", :type => "text/css" }
   %body
     
-    #navigation
-      %a{ :href => '/about_us.html' } About Us
-      %a{ :href => '/disbursements.html' } Disbursements
-      %a{ :href => '/compensation.html' } Compensation
-      %a{ :href => '/promotions.html' } Promotions
-      %a{ :href => '/case_studies.html' } Case Studies
-      %a{ :href => '/contact.html' } Contact Us
+    .container_12
 
-    :plain
-      {{ content }}
+      .grid_12
+
+        #navigation
+          %ul
+            %li
+              %a{ :href => '/about_us.html' } About Us
+            %li
+              %a{ :href => '/disbursements.html' } Disbursements
+            %li
+              %a{ :href => '/compensation.html' } Compensation
+            %li
+              %a{ :href => '/promotions.html' } Promotions
+            %li
+              %a{ :href => '/case_studies.html' } Case Studies
+            %li
+              %a{ :href => '/contact.html' } Contact Us
+
+      :plain
+        {{ content }}

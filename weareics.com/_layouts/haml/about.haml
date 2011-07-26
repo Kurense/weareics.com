@@ -3,12 +3,23 @@
   layout: default
   ---
 
-#subnavigation
-  %a{ :href => '/about_us/overview.html' } Overview
-  %a{ :href => '/about_us/innovation.html' } Innovation
-  %a{ :href => '/about_us/team.html' } Team
-  %a{ :href => '/about_us/partners.html' } Partners
-  %a{ :href => '/about_us/news.html' } News and Media
+.grid_3
 
-:plain
-  {{ content }}
+  #subnavigation
+    .title About Us
+    %ul
+      %li
+        %a{ :href => '/about_us/overview.html' } Overview
+      %li
+        %a{ :href => '/about_us/innovation.html' } Innovation
+      %li
+        %a{ :href => '/about_us/team.html' } Team
+      %li
+        %a{ :href => '/about_us/partners.html' } Partners
+      %li
+        %a{ :href => '/about_us/news.html' } News and Media
+
+.grid_9
+
+  :plain
+    {{ content }}
