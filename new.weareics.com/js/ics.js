@@ -13,11 +13,14 @@
   startBanners = function() {
     var showBanner, showNextBanner, t;
     t = null;
-    showBanner = function(banner) {
+    showBanner = function(next) {
+      var curr;
+      curr = $("#banners .banner:visible");
+      $("#banners .top").css("background-image", "url(" + (curr.find("img").attr("src")) + ")");
       $("#banners .banner").hide();
-      banner.show();
+      next.fadeIn(300);
       $("#banners a").removeClass("selected");
-      return $("#banners a:nth-child(" + ($(banner).index() + 1) + ")").addClass("selected");
+      return $("#banners a:nth-child(" + (next.index() + 1) + ")").addClass("selected");
     };
     showNextBanner = __bind(function() {
       var next;
@@ -32,7 +35,9 @@
       clearTimeout(t);
       return showBanner($("#banners .banner:nth-child(" + ($(this).index() + 1) + ")"));
     });
-    return showNextBanner();
+    setTimeout(showNextBanner, 6000);
+    $("#banners .banner:first-child").show();
+    return $("#banners .links a:first-child").addClass("selected");
   };
   $(document).ready(function() {
     highlightNavigation();
