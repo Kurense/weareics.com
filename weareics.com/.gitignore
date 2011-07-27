@@ -1,5 +1,1 @@
-_site
-_layouts/*.html
-css/*.css
-css/sass/.sass-cache
-js/*.js
+.DS_Store
