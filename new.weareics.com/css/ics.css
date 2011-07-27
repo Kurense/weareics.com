@@ -83,20 +83,20 @@ body {
     float: left;
     margin-right: 2em; }
     #footer #logos a.ct {
-      width: 142px;
-      height: 60px;
+      width: 71px;
+      height: 30px;
       background-image: url(/images/ct_off.png); }
       #footer #logos a.ct:hover {
         background-image: url(/images/ct_on.png); }
     #footer #logos a.uncf {
-      width: 97px;
-      height: 60px;
+      width: 49px;
+      height: 30px;
       background-image: url(/images/uncf_off.png); }
       #footer #logos a.uncf:hover {
         background-image: url(/images/uncf_on.png); }
     #footer #logos a.pci {
-      width: 205px;
-      height: 61px;
+      width: 103px;
+      height: 31px;
       background-image: url(/images/pci_off.png); }
       #footer #logos a.pci:hover {
         background-image: url(/images/pci_on.png); }
