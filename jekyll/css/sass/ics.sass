@@ -65,22 +65,30 @@ body
   #banners
     color: black
 
-    .images
-      .banner
-        display: none
-        width: 700px
-        height: 206px
+    .banner
+      display: none
+      width: 700px
+      height: 206px
 
     .links
       float: right
-      padding-top: 3px
+      padding-top: 5px
+      padding-right: 30px
 
-      .link
-        float: left
+      a
         display: block
-        padding: 3px
-        margin-left: 0.5em
-        border: 1px solid black
+        float: left
+        margin-left: 15px
+        padding: 3px 4px 0 4px
+        font-size: 8pt
+        line-height: 8pt
+        border: 1px solid gray
+        background-color: #ddd
+        text-decoration: none
+
+        &.selected
+          color: white
+          background-color: blue
 
 #footer
   margin-top: 20px
