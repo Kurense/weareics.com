@@ -11,6 +11,9 @@ startBanners = () ->
     $("#banners .banner").hide()
     banner.show()
 
+    $("#banners a").removeClass("selected")
+    $("#banners a:nth-child(#{$(banner).index() + 1})").addClass("selected")
+
   showNextBanner = () =>
     next = $("#banners .banner:visible").next()
     if (next.length == 0)
@@ -19,7 +22,7 @@ startBanners = () ->
     showBanner(next)
     t = setTimeout(showNextBanner, 3000)
 
-  $("#banners .links .link").click () ->
+  $("#banners .links a").click () ->
     clearTimeout(t)
     showBanner($("#banners .banner:nth-child(#{$(this).index() + 1})"))
 

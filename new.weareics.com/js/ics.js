@@ -15,7 +15,9 @@
     t = null;
     showBanner = function(banner) {
       $("#banners .banner").hide();
-      return banner.show();
+      banner.show();
+      $("#banners a").removeClass("selected");
+      return $("#banners a:nth-child(" + ($(banner).index() + 1) + ")").addClass("selected");
     };
     showNextBanner = __bind(function() {
       var next;
@@ -26,7 +28,7 @@
       showBanner(next);
       return t = setTimeout(showNextBanner, 3000);
     }, this);
-    $("#banners .links .link").click(function() {
+    $("#banners .links a").click(function() {
       clearTimeout(t);
       return showBanner($("#banners .banner:nth-child(" + ($(this).index() + 1) + ")"));
     });
