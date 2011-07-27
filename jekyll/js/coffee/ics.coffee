@@ -20,7 +20,7 @@ startBanners = () ->
       next = $("#banners .banner").first()
 
     showBanner(next)
-    t = setTimeout(showNextBanner, 3000)
+    t = setTimeout(showNextBanner, 6000)
 
   $("#banners .links a").click () ->
     clearTimeout(t)

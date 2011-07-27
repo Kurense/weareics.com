@@ -26,7 +26,7 @@
         next = $("#banners .banner").first();
       }
       showBanner(next);
-      return t = setTimeout(showNextBanner, 3000);
+      return t = setTimeout(showNextBanner, 6000);
     }, this);
     $("#banners .links a").click(function() {
       clearTimeout(t);
