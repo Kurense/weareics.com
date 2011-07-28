@@ -49,7 +49,19 @@ body {
     #subnavigation ul li {
       margin-top: 1em; }
 
+#content h1, #content h2 {
+  color: black;
+  font-weight: bold; }
+#content h1 {
+  font-size: 11pt;
+  margin-bottom: 1em; }
+#content h2 {
+  font-size: 10pt;
+  margin-bottom: 0.5em; }
+#content p {
+  margin-bottom: 1em; }
 #content #banners {
+  margin-bottom: 1em;
   color: black; }
   #content #banners .banner {
     display: none;
