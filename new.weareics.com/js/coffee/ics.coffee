@@ -5,18 +5,15 @@ highlightNavigation = () ->
       $(link).addClass("selected")
 
 startBanners = () ->
-  t = null
+  timer = null
 
-  showBanner = (next) ->
-    curr = $("#banners .banner:visible")
+  $("#banners .banner:first-child").show()
+  $("#banners #dots .dot:first-child").addClass("selected")
 
-    $("#banners .top").css("background-image", "url(#{curr.find("img").attr("src")})")
-    $("#banners .banner").hide()
-
-    next.fadeIn(300)
-
-    $("#banners a").removeClass("selected")
-    $("#banners a:nth-child(#{next.index() + 1})").addClass("selected")
+  $("#banners #dots .dot").click ->
+    next = $("#banners .banner:nth-child(#{$(this).index() + 1})")
+    showBanner(next)
+    clearTimeout(timer)
 
   showNextBanner = () =>
     next = $("#banners .banner:visible").next()
@@ -24,16 +21,18 @@ startBanners = () ->
       next = $("#banners .banner").first()
 
     showBanner(next)
-    t = setTimeout(showNextBanner, 6000)
+    timer = setTimeout(showNextBanner, 6000)
 
-  $("#banners .links a").click () ->
-    clearTimeout(t)
-    showBanner($("#banners .banner:nth-child(#{$(this).index() + 1})"))
+  showBanner = (next) ->
+    curr = $("#banners .banner:visible")
+    $("#banners #images").css("background-image", "url(#{curr.find("img").attr("src")})")
+    $("#banners .banner").hide()
+    next.fadeIn(1000)
+
+    $("#banners #dots .dot").removeClass("selected")
+    $("#banners #dots .dot:nth-child(#{next.index() + 1})").addClass("selected")
 
   setTimeout(showNextBanner, 6000)
-
-  $("#banners .banner:first-child").show()
-  $("#banners .links a:first-child").addClass("selected")
 
 $(document).ready ->
   highlightNavigation()

@@ -11,17 +11,16 @@
     });
   };
   startBanners = function() {
-    var showBanner, showNextBanner, t;
-    t = null;
-    showBanner = function(next) {
-      var curr;
-      curr = $("#banners .banner:visible");
-      $("#banners .top").css("background-image", "url(" + (curr.find("img").attr("src")) + ")");
-      $("#banners .banner").hide();
-      next.fadeIn(300);
-      $("#banners a").removeClass("selected");
-      return $("#banners a:nth-child(" + (next.index() + 1) + ")").addClass("selected");
-    };
+    var showBanner, showNextBanner, timer;
+    timer = null;
+    $("#banners .banner:first-child").show();
+    $("#banners #dots .dot:first-child").addClass("selected");
+    $("#banners #dots .dot").click(function() {
+      var next;
+      next = $("#banners .banner:nth-child(" + ($(this).index() + 1) + ")");
+      showBanner(next);
+      return clearTimeout(timer);
+    });
     showNextBanner = __bind(function() {
       var next;
       next = $("#banners .banner:visible").next();
@@ -29,15 +28,18 @@
         next = $("#banners .banner").first();
       }
       showBanner(next);
-      return t = setTimeout(showNextBanner, 6000);
+      return timer = setTimeout(showNextBanner, 6000);
     }, this);
-    $("#banners .links a").click(function() {
-      clearTimeout(t);
-      return showBanner($("#banners .banner:nth-child(" + ($(this).index() + 1) + ")"));
-    });
-    setTimeout(showNextBanner, 6000);
-    $("#banners .banner:first-child").show();
-    return $("#banners .links a:first-child").addClass("selected");
+    showBanner = function(next) {
+      var curr;
+      curr = $("#banners .banner:visible");
+      $("#banners #images").css("background-image", "url(" + (curr.find("img").attr("src")) + ")");
+      $("#banners .banner").hide();
+      next.fadeIn(1000);
+      $("#banners #dots .dot").removeClass("selected");
+      return $("#banners #dots .dot:nth-child(" + (next.index() + 1) + ")").addClass("selected");
+    };
+    return setTimeout(showNextBanner, 6000);
   };
   $(document).ready(function() {
     highlightNavigation();
