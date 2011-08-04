@@ -55,22 +55,24 @@ a {
 #subnavigation li {
   margin-bottom: 20px; }
 
-#banners #images {
-  width: 700px;
-  height: 206px; }
-  #banners #images .banner {
-    display: none; }
-#banners #dots {
-  float: right;
-  padding-top: 5px; }
-  #banners #dots .dot {
-    float: left;
-    margin-left: 5px;
-    width: 16px;
-    height: 16px;
-    background: url(/images/banners/dots/off.png); }
-    #banners #dots .dot.selected {
-      background: url(/images/banners/dots/on.png); }
+#banners {
+  margin-bottom: 20px; }
+  #banners #images {
+    width: 700px;
+    height: 206px; }
+    #banners #images .banner {
+      display: none; }
+  #banners #dots {
+    float: right;
+    padding-top: 5px; }
+    #banners #dots .dot {
+      float: left;
+      margin-left: 5px;
+      width: 16px;
+      height: 16px;
+      background: url(/images/banners/dots/off.png); }
+      #banners #dots .dot.selected {
+        background: url(/images/banners/dots/on.png); }
 
 #copyright {
   text-align: center;
