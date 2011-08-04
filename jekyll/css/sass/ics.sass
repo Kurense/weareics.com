@@ -35,7 +35,7 @@ a
 
 #navigation
   margin-top: 15px
-  margin-bottom: 35px
+  margin-bottom: 40px
   border-top: 1px solid $lightgray
   padding-top: 15px
   font-size: 11pt
@@ -50,6 +50,27 @@ a
 #subnavigation
   li
     margin-bottom: 20px
+
+#banners
+  #images
+    width: 700px
+    height: 206px
+    .banner
+      display: none
+
+  #dots
+    float: right
+    padding-top: 5px
+
+    .dot
+      float: left
+      margin-left: 5px
+      width: 31px
+      height: 31px
+      background: url(/images/banners/dots/off.png)
+
+      &.selected
+        background: url(/images/banners/dots/on.png)
 
 #copyright
   text-align: center

@@ -5,10 +5,15 @@ highlightNavigation = () ->
       $(link).addClass("selected")
 
 startBanners = () ->
-  $("#banners .banner").hide()
-  $("#banners .banner:first-child").show()
+  timer = null
 
-  t = null
+  $("#banners .banner:first-child").show()
+  $("#banners #dots .dot:first-child").addClass("selected")
+
+  $("#banners #dots .dot").click ->
+    next = $("#banners .banner:nth-child(#{$(this).index() + 1})")
+    showBanner(next)
+    clearTimeout(timer)
 
   showNextBanner = () =>
     next = $("#banners .banner:visible").next()
@@ -16,13 +21,16 @@ startBanners = () ->
       next = $("#banners .banner").first()
 
     showBanner(next)
-    t = setTimeout(showNextBanner, 6000)
+    timer = setTimeout(showNextBanner, 6000)
 
   showBanner = (next) ->
     curr = $("#banners .banner:visible")
-    $("#banners").css("background-image", "url(#{curr.find("img").attr("src")})")
+    $("#banners #images").css("background-image", "url(#{curr.find("img").attr("src")})")
     $("#banners .banner").hide()
     next.fadeIn(1000)
+
+    $("#banners #dots .dot").removeClass("selected")
+    $("#banners #dots .dot:nth-child(#{next.index() + 1})").addClass("selected")
 
   setTimeout(showNextBanner, 6000)
 
