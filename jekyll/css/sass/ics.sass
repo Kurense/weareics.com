@@ -1,2 +1,57 @@
+$blue: #0a4193
+$gray: #999
+$lightgray: #bbb
+
 body
-  color: #666
+  color: $gray
+  font-family: sans-serif
+  font-size: 12pt
+
+a
+  color: $blue
+
+#header
+  margin-top: 25px
+
+  #logo
+    padding: 20px
+    border-right: 1px solid $lightgray
+
+  #tagline
+    font-size: 14pt
+    margin-top: 45px
+    margin-left: 20px
+
+#navigation, #subnavigation
+
+  li
+    list-style-type: none
+
+  a
+    text-decoration: none
+    color: $lightgray
+    &.selected
+      color: $blue
+
+#navigation
+  margin-top: 15px
+  margin-bottom: 35px
+  border-top: 1px solid $lightgray
+  padding-top: 15px
+  font-size: 11pt
+
+  li
+    display: inline
+    margin-right: 30px
+
+  a
+    text-transform: uppercase
+
+#subnavigation
+  li
+    margin-bottom: 20px
+
+#copyright
+  text-align: center
+  margin-top: 30px
+  font-size: 9pt
