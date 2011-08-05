@@ -57,8 +57,7 @@ a {
 #subnavigation #border {
   display: block;
   float: right;
-  margin-right: 20px;
-  margin-left: 10px;
+  margin: -15px 20px 0 10px;
   width: 1px;
   height: 300px;
   border-right: 1px solid #bbbbbb; }
