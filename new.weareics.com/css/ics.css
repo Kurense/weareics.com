@@ -76,7 +76,36 @@ a {
       #banners #dots .dot.selected {
         background: url(/images/banners/dots/on.png); }
 
+#contact .location .name {
+  font-weight: bold; }
+
+#footer {
+  margin-top: 50px;
+  background-color: red; }
+  #footer #logos a {
+    display: block;
+    float: left;
+    margin-right: 30px; }
+    #footer #logos a.ct {
+      width: 71px;
+      height: 30px;
+      background-image: url(/images/footer/ct.png); }
+      #footer #logos a.ct:hover {
+        background-image: url(/images/footer/ct_color.png); }
+    #footer #logos a.pci {
+      width: 103px;
+      height: 31px;
+      background-image: url(/images/footer/pci.png); }
+      #footer #logos a.pci:hover {
+        background-image: url(/images/footer/pci_color.png); }
+    #footer #logos a.uncf {
+      width: 49px;
+      height: 30px;
+      background-image: url(/images/footer/uncf.png); }
+      #footer #logos a.uncf:hover {
+        background-image: url(/images/footer/uncf_color.png); }
+
 #copyright {
   text-align: center;
   margin: 30px;
-  font-size: 0.8em; }
+  font-size: 0.75em; }
