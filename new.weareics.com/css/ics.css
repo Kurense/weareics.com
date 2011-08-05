@@ -20,7 +20,8 @@ p {
   line-height: 1.8em; }
 
 a {
-  color: #0a4193; }
+  color: #0a4193;
+  text-decoration: none; }
 
 #header {
   margin-top: 25px; }
@@ -37,7 +38,6 @@ a {
 #navigation li, #subnavigation li {
   list-style-type: none; }
 #navigation a, #subnavigation a {
-  text-decoration: none;
   color: #bbbbbb;
   font-size: 0.9em; }
   #navigation a.selected, #subnavigation a.selected {
