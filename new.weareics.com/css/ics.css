@@ -87,30 +87,33 @@ a {
   font-weight: bold; }
 
 #footer {
-  margin-top: 100px;
-  background-color: red; }
-  #footer #logos a {
-    display: block;
-    float: left;
-    margin-right: 30px; }
-    #footer #logos a.ct {
-      width: 71px;
-      height: 30px;
-      background-image: url(/images/footer/ct.png); }
-      #footer #logos a.ct:hover {
-        background-image: url(/images/footer/ct_color.png); }
-    #footer #logos a.pci {
-      width: 103px;
-      height: 31px;
-      background-image: url(/images/footer/pci.png); }
-      #footer #logos a.pci:hover {
-        background-image: url(/images/footer/pci_color.png); }
-    #footer #logos a.uncf {
-      width: 49px;
-      height: 30px;
-      background-image: url(/images/footer/uncf.png); }
-      #footer #logos a.uncf:hover {
-        background-image: url(/images/footer/uncf_color.png); }
+  margin-top: 100px; }
+  #footer #logos {
+    height: 50px; }
+    #footer #logos a {
+      display: block;
+      float: left;
+      margin-right: 30px; }
+      #footer #logos a.ct {
+        margin-top: 10px;
+        width: 71px;
+        height: 30px;
+        background-image: url(/images/footer/ct.png); }
+        #footer #logos a.ct:hover {
+          background-image: url(/images/footer/ct_color.png); }
+      #footer #logos a.pci {
+        margin-top: 10px;
+        width: 103px;
+        height: 31px;
+        background-image: url(/images/footer/pci.png); }
+        #footer #logos a.pci:hover {
+          background-image: url(/images/footer/pci_color.png); }
+      #footer #logos a.nmsdc {
+        width: 40px;
+        height: 50px;
+        background-image: url(/images/footer/nmsdc.png); }
+        #footer #logos a.nmsdc:hover {
+          background-image: url(/images/footer/nmsdc_color.png); }
 
 #copyright {
   text-align: center;
