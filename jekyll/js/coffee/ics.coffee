@@ -11,9 +11,9 @@ startBanners = () ->
   $("#banners #dots .dot:first-child").addClass("selected")
 
   $("#banners #dots .dot").click ->
+    clearTimeout(timer)
     next = $("#banners .banner:nth-child(#{$(this).index() + 1})")
     showBanner(next)
-    clearTimeout(timer)
 
   showNextBanner = () =>
     next = $("#banners .banner:visible").last().next()
