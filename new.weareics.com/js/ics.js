@@ -23,7 +23,7 @@
     });
     showNextBanner = __bind(function() {
       var next;
-      next = $("#banners .banner:visible").next();
+      next = $("#banners .banner:visible").last().next();
       if (next.length === 0) {
         next = $("#banners .banner").first();
       }
@@ -31,11 +31,16 @@
       return timer = setTimeout(showNextBanner, 6000);
     }, this);
     showBanner = function(next) {
-      var curr;
+      var curr, wasAnimating;
       curr = $("#banners .banner:visible");
       $("#banners #images").css("background-image", "url(" + (curr.find("img").attr("src")) + ")");
-      $("#banners .banner").hide();
-      next.fadeIn(1000);
+      wasAnimating = $("#banners .banner:animated").length > 0;
+      $("#banners .banner").stop(true, true).hide();
+      if (wasAnimating) {
+        next.show();
+      } else {
+        next.fadeIn(1000);
+      }
       $("#banners #dots .dot").removeClass("selected");
       return $("#banners #dots .dot:nth-child(" + (next.index() + 1) + ")").addClass("selected");
     };
