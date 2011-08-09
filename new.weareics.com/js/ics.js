@@ -17,9 +17,9 @@
     $("#banners #dots .dot:first-child").addClass("selected");
     $("#banners #dots .dot").click(function() {
       var next;
+      clearTimeout(timer);
       next = $("#banners .banner:nth-child(" + ($(this).index() + 1) + ")");
-      showBanner(next);
-      return clearTimeout(timer);
+      return showBanner(next);
     });
     showNextBanner = __bind(function() {
       var next;
