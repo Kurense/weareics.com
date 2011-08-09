@@ -1,32 +1,55 @@
 ---
-layout: home
+layout: default
 ---
 
-#banners
-  #images
-    .banner
-      %a{ :href => '/case_studies/mays.html' }
-        %img{ :src => "images/banners/mays.png" }
-    .banner
-      %a{ :href => '/case_studies/trine.html' }
-        %img{ :src => "images/banners/trine.png" }
-    .banner
-      %a{ :href => '/case_studies/avon.html' }
-        %img{ :src => "images/banners/avon.png" }
-    .banner
-      %a{ :href => '/case_studies/fmu.html' }
-        %img{ :src => "images/banners/fmu.png" }
-  #dots
-    .dot
-    .dot
-    .dot
-    .dot
+.grid_12
 
-  .clear
+  #banners
+    #images
+      .banner
+        %a{ :href => '/case_studies/mays.html' }
+          %img{ :src => "images/banners/mays.png" }
+      .banner
+        %a{ :href => '/case_studies/trine.html' }
+          %img{ :src => "images/banners/trine.png" }
+      .banner
+        %a{ :href => '/case_studies/avon.html' }
+          %img{ :src => "images/banners/avon.png" }
+      .banner
+        %a{ :href => '/case_studies/fmu.html' }
+          %img{ :src => "images/banners/fmu.png" }
+    #dots
+      .dot
+      .dot
+      .dot
+      .dot
 
-%p
-  Innovative Card Solutions (ICS) powers the development of various and unique
-  prepaid card solutions, where we strive towards being at the forefront in the
-  electronic payments evolution while promoting financial literacy, cost
-  reduction in defining and driving efficiencies, and enhancing client brand
-  awareness.
+    .clear
+
+#columns
+
+  .grid_4
+    .column
+      .border
+      .title News Update
+      .subtitle CincyTech invests in financial services firm
+      %p
+        Innovative Card Solutions provides prepaid MasterCard cards as well as
+        financial literacy education.
+        %span.date July 22, 2011
+  .grid_4
+    .column
+      .border
+      .title Featured Enhancement
+      .subtitle 50,000 loading stations
+      %p
+        ICS now offers reload services nationwide at approximately 50,000
+        retail stores.
+  .grid_4
+    .column
+      .border
+      .title Upcoming Event
+      .subtitle ICS to facilitate financial literacy sessions
+      %p
+        Innovative Card Solutions will provide financial literacy education
+        seminars to 40 member UNCF colleges.

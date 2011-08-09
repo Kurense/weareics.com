@@ -1,11 +1,12 @@
 $blue: #0a4193
 $gray: #999
 $lightgray: #bbb
+$darkgray: #555
 
 body
   color: $gray
   font-family: sans-serif
-  font-size: 100%
+  font-size: 90%
 
 h1, h2
   color: $blue
@@ -48,7 +49,6 @@ a
 
   a
     color: $lightgray
-    font-size: 0.9em
 
     &.selected
       color: $blue
@@ -83,8 +83,8 @@ a
   margin-bottom: 20px
 
   #images
-    width: 700px
-    height: 206px
+    width: 940px
+    height: 365px
     .banner
       display: none
 
@@ -101,6 +101,21 @@ a
 
       &.selected
         background: url(/images/banners/dots/on.png)
+
+#columns
+
+  .column
+
+    .title, .subtitle
+      line-height: 1.8em
+      color: $darkgray
+
+    .title
+      font-size: 110%
+      text-transform: uppercase
+
+    .subtitle
+      font-weight: bold
 
 #contact
 
