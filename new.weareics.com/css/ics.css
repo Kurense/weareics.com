@@ -82,6 +82,13 @@ a {
       #banners #dots .dot.selected {
         background: url(/images/banners/dots/on.png); }
 
+#columns .column .border {
+  display: block;
+  float: right;
+  width: 1px;
+  height: 200px;
+  border-right: 1px solid #bbbbbb;
+  margin-left: 10px; }
 #columns .column .title, #columns .column .subtitle {
   line-height: 1.8em;
   color: #555555; }
@@ -89,7 +96,12 @@ a {
   font-size: 110%;
   text-transform: uppercase; }
 #columns .column .subtitle {
-  font-weight: bold; }
+  font-weight: bold;
+  font-size: 0.9em; }
+#columns .column p {
+  font-size: 0.9em; }
+#columns .column img {
+  float: right; }
 
 #contact .location .name {
   font-weight: bold; }
