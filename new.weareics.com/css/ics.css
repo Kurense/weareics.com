@@ -105,6 +105,11 @@ a {
   color: #555555; }
 #columns .column p {
   font-size: 0.9em; }
+#columns .column .date {
+  margin-left: 1em;
+  font-style: italic; }
+#columns .column a {
+  margin-left: 1em; }
 #columns .column img {
   float: right; }
 
