@@ -92,11 +92,11 @@ a {
   margin-left: 10px; }
 #columns .column .title, #columns .column .subtitle {
   font-size: 0.9em;
-  line-height: 1.8em; }
-#columns .column .title {
-  text-transform: uppercase;
+  line-height: 1.8em;
   font-weight: bold;
-  color: #222222; }
+  color: #555555; }
+#columns .column .title {
+  text-transform: uppercase; }
 #columns .column .subtitle {
   margin-bottom: 5px; }
 #columns .column p {
