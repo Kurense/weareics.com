@@ -24,19 +24,20 @@
       .grid_12
 
         #navigation
-          %ul
-            %li
-              %a{ :href => '/about/overview.html', :prefix => '/about/' } About Us
-            %li
-              %a{ :href => '/disbursements/claims.html', :prefix => '/disbursements/' } Disbursements
-            %li
-              %a{ :href => '/compensation/payroll.html', :prefix => '/compensation/' } Compensation
-            %li
-              %a{ :href => '/promotions/gift_cards.html', :prefix => '/promotions/' } Promotions
-            %li
-              %a{ :href => '/case_studies/fmu.html', :prefix => '/case_studies/' } Case Studies
-            %li
-              %a{ :href => '/contact.html' } Contact Us
+          %table
+            %tr
+              %td
+                %a{ :href => '/about/overview.html', :prefix => '/about/' } About&nbsp;Us
+              %td
+                %a{ :href => '/disbursements/claims.html', :prefix => '/disbursements/' } Disbursements
+              %td
+                %a{ :href => '/compensation/payroll.html', :prefix => '/compensation/' } Compensation
+              %td
+                %a{ :href => '/promotions/gift_cards.html', :prefix => '/promotions/' } Promotions
+              %td
+                %a{ :href => '/case_studies/fmu.html', :prefix => '/case_studies/' } Case&nbsp;Studies
+              %td
+                %a{ :href => '/contact.html' } Contact&nbsp;Us
 
       :plain
         {{ content }}

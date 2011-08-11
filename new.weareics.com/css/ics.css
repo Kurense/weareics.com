@@ -37,8 +37,6 @@ a {
 
 #navigation, #subnavigation {
   font-size: 0.9em; }
-  #navigation li, #subnavigation li {
-    list-style-type: none; }
   #navigation a, #subnavigation a {
     color: #bbbbbb; }
     #navigation a.selected, #subnavigation a.selected {
@@ -48,14 +46,12 @@ a {
   margin: 15px 0 40px 0;
   border-top: 1px solid #bbbbbb;
   padding-top: 15px; }
-  #navigation ul {
-    text-align: center;
-    padding-left: 35px; }
-    #navigation ul li {
-      display: inline;
-      margin-right: 35px; }
   #navigation a {
     text-transform: uppercase; }
+  #navigation table {
+    width: 100%; }
+    #navigation table td {
+      text-align: center; }
 
 #subnavigation #border {
   display: block;
@@ -65,6 +61,7 @@ a {
   height: 300px;
   border-right: 1px solid #bbbbbb; }
 #subnavigation li {
+  list-style-type: none;
   margin-bottom: 20px; }
 
 #banners {
