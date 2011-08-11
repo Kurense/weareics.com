@@ -93,12 +93,13 @@ a {
 #columns .column .title, #columns .column .subtitle {
   font-size: 0.9em;
   line-height: 1.8em;
-  font-weight: bold;
-  color: #555555; }
+  font-weight: bold; }
 #columns .column .title {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  color: #0a4193; }
 #columns .column .subtitle {
-  margin-bottom: 5px; }
+  margin-bottom: 5px;
+  color: #555555; }
 #columns .column p {
   font-size: 0.9em; }
 #columns .column img {
