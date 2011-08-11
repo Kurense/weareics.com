@@ -111,6 +111,10 @@ a {
 #contact .location .name {
   font-weight: bold; }
 
+#case_study img {
+  float: right;
+  margin: 0 0 15px 15px; }
+
 #footer {
   margin-top: 100px; }
   #footer #logos {
