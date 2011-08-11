@@ -95,14 +95,10 @@ a {
   line-height: 1.8em; }
 #columns .column .title {
   text-transform: uppercase;
-  color: #555555; }
+  font-weight: bold;
+  color: #222222; }
 #columns .column .subtitle {
-  font-weight: bold; }
-  #columns .column .subtitle a {
-    color: #3b3b3b;
-    text-decoration: underline; }
-    #columns .column .subtitle a:hover {
-      color: #0a4193; }
+  margin-bottom: 5px; }
 #columns .column p {
   font-size: 0.9em; }
 #columns .column img {
