@@ -39,7 +39,7 @@ a {
   font-size: 0.9em; }
   #navigation a, #subnavigation a {
     color: #bbbbbb; }
-    #navigation a.selected, #subnavigation a.selected {
+    #navigation a.selected, #navigation a:hover, #subnavigation a.selected, #subnavigation a:hover {
       color: #0a4193; }
 
 #navigation {
