@@ -116,13 +116,19 @@ a
     .title, .subtitle
       font-size: 0.9em
       line-height: 1.8em
-      color: $darkgray
 
     .title
       text-transform: uppercase
+      color: $darkgray
 
     .subtitle
       font-weight: bold
+
+      a
+        color: darken($darkgray, 10%)
+        text-decoration: underline
+        &:hover
+          color: $blue
 
     p
       font-size: 0.9em

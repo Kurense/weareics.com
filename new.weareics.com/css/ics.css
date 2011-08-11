@@ -92,12 +92,17 @@ a {
   margin-left: 10px; }
 #columns .column .title, #columns .column .subtitle {
   font-size: 0.9em;
-  line-height: 1.8em;
-  color: #555555; }
+  line-height: 1.8em; }
 #columns .column .title {
-  text-transform: uppercase; }
+  text-transform: uppercase;
+  color: #555555; }
 #columns .column .subtitle {
   font-weight: bold; }
+  #columns .column .subtitle a {
+    color: #3b3b3b;
+    text-decoration: underline; }
+    #columns .column .subtitle a:hover {
+      color: #0a4193; }
 #columns .column p {
   font-size: 0.9em; }
 #columns .column img {
