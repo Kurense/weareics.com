@@ -4,19 +4,18 @@ body {
   font-size: 90%; }
 
 h1, h2 {
-  font-weight: normal;
-  margin-bottom: 1em; }
+  font-weight: normal; }
 
 h1 {
   color: #0a4193;
   font-size: 1.3em;
-  margin-bottom: 1em;
+  margin-bottom: 0.5em;
   margin-top: 0; }
 
 h2 {
   color: #555555;
   font-size: 1.1em;
-  margin-top: 1.2em;
+  margin-top: 1.5em;
   margin-bottom: 0.5em; }
 
 p {
@@ -105,12 +104,14 @@ a {
 #columns .column .subtitle {
   margin-bottom: 5px;
   color: #555555; }
+#columns .column img {
+  float: right;
+  margin-left: 10px;
+  margin-bottom: 10px; }
 #columns .column p {
   font-size: 0.9em; }
 #columns .column a {
   margin-left: 1em; }
-#columns .column img {
-  float: right; }
 
 #contact .location .name {
   font-weight: bold; }
