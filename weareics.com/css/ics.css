@@ -10,7 +10,8 @@ h1, h2 {
 h1 {
   color: #0a4193;
   font-size: 1.3em;
-  margin-bottom: 1em; }
+  margin-bottom: 1em;
+  margin-top: 0; }
 
 h2 {
   color: #555555;
