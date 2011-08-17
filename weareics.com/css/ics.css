@@ -118,6 +118,11 @@ a {
   margin-left: 15px;
   margin-bottom: 10px; }
 
+#advisory_board img {
+  float: right;
+  margin-left: 15px;
+  margin-bottom: 10px; }
+
 #case_study img {
   float: right;
   width: 300px;
