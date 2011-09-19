@@ -112,6 +112,8 @@ a {
   font-size: 0.9em; }
 #columns .column a {
   margin-left: 1em; }
+#columns .column p.footnote {
+  font-size: 0.7em; }
 
 #partners img {
   float: right;
