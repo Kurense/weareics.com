@@ -12,8 +12,8 @@
   };
 
   startBanners = function() {
-    var showBanner, showNextBanner, timer;
-    var _this = this;
+    var showBanner, showNextBanner, timer,
+      _this = this;
     timer = null;
     $("#banners .banner:first-child").show();
     $("#banners #dots .dot:first-child").addClass("selected");
@@ -26,7 +26,9 @@
     showNextBanner = function() {
       var next;
       next = $("#banners .banner:visible").last().next();
-      if (next.length === 0) next = $("#banners .banner").first();
+      if (next.length === 0) {
+        next = $("#banners .banner").first();
+      }
       showBanner(next);
       return timer = setTimeout(showNextBanner, 6000);
     };
