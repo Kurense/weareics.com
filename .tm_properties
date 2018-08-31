@@ -1,0 +1,2 @@
+excludeDirectories = "{$excludeDirectories,tmp,_site}"
+includeFiles = "{$includeFiles,.gitignore,.ruby-version}"
